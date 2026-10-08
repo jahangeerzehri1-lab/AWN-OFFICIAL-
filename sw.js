@@ -1,7 +1,7 @@
 /* AWN app: works offline for pages and photos you have already opened.
    When you change index.html or add new images, change VERSION to publish the update. */
 const VERSION = "awn-v1";
-const CORE = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/icon-512.png", "icons/maskable-512.png", "icons/favicon-32.png"];
+const CORE = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "maskable-512.png", "favicon-32.png"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(CORE)).then(() => self.skipWaiting()));
 });
